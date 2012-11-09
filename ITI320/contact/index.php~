@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="../include/styles.css" rel="stylesheet" type="text/css">
+<?php include '../globalVariables.php'; 
+	echo $navIncludes; ?> 
+<title>Contact Us</title>
+</head>
+<body>
+<?php echo $header; echo $nav;?>
+<?php 
+if(isset($_POST['contact_us']) && isset($_POST["email"]))
+{
+	$recipient = "skits@stevekane.us";
+	$subject = "Contact Us Response";
+	$email = '';
+	while (list($field, $value) = each($_POST)) 
+	{
+		$value=trim($value);
+		if($field == "email")
+		{
+			$from = $value;
+		}
+		$email .= "\n $field : $value";
+	}
+	$headers .= "MIME-Version: 1.0\n";
+	$headers .= "Content-type: text/plain; charset=UTF-8\n";
+	$headers .= "From: ".$from."\n";
+	$headers .= "Reply-To: ".$from."\n";
+	mail($recipient, $subject, $email, $headers);	
+	echo '<p>Thank you for contacting SKITS. Steve or Steve, or Steve will contact you soon.</p>';
+}
+?>
+<h1>Contact Steve</h1>
+<form method="post" action=".">
+<table>
+<tr>
+<td><label for="firstName">First Name: </label></td>
+<td><input name="firstName" type="text" size="30"></td>
+</tr>
+<tr>
+<td><label for="lastName">Last Name: </label></td>
+<td><input name="lastName" type="text" size="30"><br /></td>
+</tr>
+<tr>
+<td><label for="company">Company: </label></td>
+<td><input name="company" type="text" size="50"></td>
+</tr>
+<tr>
+<td><label for="email">Email: </label></td>
+<td><input name="email" type="text" size="50"></td>
+</tr>
+<tr>
+<td colspan="2"><label for="comments">Questions, Comments, Feedback: </label><br /></td>
+</tr>
+<tr>
+<td colspan="2"><textarea name="comments" style="width: 100%; height: 150px;"></textarea></td>
+</tr>
+</table>
+
+<br />
+<input type="submit" name="contact_us" value="Submit">
+</form>
+<?php echo $footer; ?>
+</body>
+</html>

@@ -1,0 +1,61 @@
+body
+{
+	width:960px; 
+	margin: 0 auto; 
+	background-color: #6B82AF;
+} 
+
+.thirds
+{
+	width:320px;
+	height:250px;
+	float:left;
+}
+
+p, label {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 112%;
+	line-height: normal;
+	font-weight: 100;
+	font-style: normal;
+}
+input {
+	font-size: 14px;
+}
+
+#footer{
+	width:100%;
+	background-color:black;
+	color:white;
+	clear: both;
+	height: 70px;
+    font-size: 90%;
+}
+
+#footer p:first-of-type
+{
+	float:left;
+	margin-top: 3%;
+	margin-left: 2%;
+}
+#footer p:last-of-type
+{
+	float:right;
+	margin-top: 3%;
+	margin-right: 2%;
+}
+
+#header
+{
+	clear: both;
+}
+
+#wrapper
+{
+	padding-left:20px;
+	padding-right:20px;
+}
+
+a:link,a:visited {color:blue;}
+a:hover {color:red;}
+a:active {color:orange;}

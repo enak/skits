@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="../include/styles.css" rel="stylesheet" type="text/css">
+<?php include '../globalVariables.php'; 
+	echo $navIncludes; ?> 
+<title>About</title>
+</head>
+<body>
+	<?php echo $header; echo $nav;?>
+	<div class="content">
+		<h1>About</h1>
+		<p>
+			Unsurprisingly, the founder of Steve Kane Information Technology Solutions (aka SKITS) 
+			is Steve Kane. Steve's collection of clients throughout central New Jersey had urged him 
+			to make himself look more official. Step one: make a website. All he needs to do now is start up 
+			the business and get some of those free business cards from Vistaprint that everyone is talking
+			about.
+		</p>
+		<p>
+			Steve currently plans to provide his <a href="../services">services</a> to people in central 
+			New Jersey, but things change so don't hesitate to ask.
+		</p>
+	</div>
+	<?php echo $footer; ?>
+</body>
+</html>
